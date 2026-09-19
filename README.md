@@ -31,7 +31,7 @@ bot itself also lives in a Daytona sandbox (deploy_bot.py) — laptop can be clo
 | **Daytona** | `bot/factory.py` `spawn()` `logs()` `stop()` `test()` | `daytona.create(CreateSandboxFromImageParams)`, `fs.upload_file`, `process.exec`, labels per user/watch, `delete` |
 | **Daytona** | `deploy_bot.py` | bot process itself hosted in a sandbox |
 | **Nosana** | `watchers/brain.py` `_nosana()` | Ollama OpenAI-compatible `/v1/chat/completions` on a Nosana GPU deployment (Qwen 3.6) — used for intent parsing and semantic judging |
-| DNSimple | `dns.py` | (optional) CNAME for a status page |
+| DNSimple | — | **not integrated** (only an untested `hello_dnsimple.py` stub) |
 
 ## Commands
 `/watch <natural language>` · `/list` · `/test <id>` (judge latest 5 items now) · `/logs <id>` · `/stop <id>`
