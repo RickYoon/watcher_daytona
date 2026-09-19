@@ -1,5 +1,7 @@
 # WatchBox — 말로 만드는 감시봇 공장
 
+Repo: https://github.com/RickYoon/watcher_daytona
+
 > Telegram에 `/watch 삼성전자 HBM 관련 부정적 뉴스 뜨면 알려줘` 라고 치면,
 > 그 조건 전용 감시 봇이 **Daytona 샌드박스 하나**로 태어나 24시간 돌고,
 > 조건은 **Nosana GPU 위 LLM**이 의미로 판정해, 맞으면 Telegram으로 알려준다.
