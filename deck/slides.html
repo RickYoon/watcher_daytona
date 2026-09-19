@@ -1,0 +1,93 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><title>WatchBox</title>
+<style>
+@page{size:1280px 720px;margin:0}
+*{box-sizing:border-box}body{margin:0;font-family:-apple-system,Inter,"Apple SD Gothic Neo",sans-serif;color:#0f172a;background:#fff}
+.s{width:1280px;height:720px;padding:60px 80px;page-break-after:always;position:relative;display:flex;flex-direction:column;overflow:hidden}
+.s:last-child{page-break-after:auto}
+h1{font-size:72px;margin:0;letter-spacing:-2px}h2{font-size:44px;margin:0 0 8px;letter-spacing:-1px}
+.sub{font-size:26px;color:#475569;margin:0 0 36px}
+.k{color:#2563eb}.g{color:#64748b}
+.tag{position:absolute;top:26px;right:80px;font-size:15px;color:#94a3b8}.n{position:absolute;bottom:22px;right:80px;font-size:13px;color:#cbd5e1}
+.row{display:flex;gap:28px;flex:1;align-items:stretch}.col{flex:1;display:flex;flex-direction:column}
+.card{background:#f8fafc;border:1px solid #e2e8f0;border-radius:20px;padding:28px 30px;flex:1;display:flex;flex-direction:column;justify-content:center}
+.card h3{margin:0 0 10px;font-size:26px}.card p{margin:0;font-size:20px;line-height:1.4;color:#475569}
+.ic{font-size:44px;margin-bottom:14px}
+.phone{width:340px;background:#0f172a;border-radius:36px;padding:16px;color:#e2e8f0;font-size:16px;line-height:1.35;flex:none}
+.phone .scr{background:#1e293b;border-radius:24px;padding:18px 16px;height:100%;display:flex;flex-direction:column;gap:10px}
+.me{align-self:flex-end;background:#2563eb;color:#fff;border-radius:16px 16px 4px 16px;padding:10px 14px;max-width:88%}
+.bot{align-self:flex-start;background:#334155;border-radius:16px 16px 16px 4px;padding:10px 14px;max-width:92%;white-space:pre-line}
+.shot{flex:1;background:#f1f5f9;border-radius:22px;display:flex;align-items:center;justify-content:center;color:#94a3b8;font-size:16px;overflow:hidden}
+.shot img{max-width:100%;max-height:100%;object-fit:contain}
+.stat{display:flex;gap:28px;margin-top:26px}.stat div{flex:1;background:#0f172a;color:#fff;border-radius:18px;padding:18px 24px}
+.stat b{display:block;font-size:34px;letter-spacing:-1px}.stat span{font-size:15px;color:#94a3b8}
+svg text{font-family:inherit}
+</style></head><body>
+
+<!-- 1 -->
+<section class="s"><span class="tag">Daytona HackSprint Seoul · 2026-09-19 · solo, 2h</span>
+<div class="row" style="align-items:center">
+<div class="col" style="justify-content:center">
+<h1>WatchBox</h1>
+<p class="sub" style="margin-top:18px;font-size:30px;line-height:1.35">Tell Telegram what to watch.<br>It spawns a <span class="k">dedicated Daytona sandbox</span> that watches 24/7 and an LLM on <span class="k">Nosana GPUs</span> decides if it matters.</p>
+<p class="g">@Daytonakorea_bot</p></div>
+<div class="phone"><div class="scr">
+<div class="me">/watch alert me on negative news about Samsung HBM</div>
+<div class="bot">🧠 news · "Samsung HBM" · every 10 min
+📦 Daytona sandbox created in 1.9s
+✅ watch #1 running</div>
+<div class="bot" style="margin-top:auto">🔔 watch #1 matched
+"Samsung HBM3E yield issue delays…"
+— reports a yield problem, negative for Samsung
+[nosana/qwen]</div></div></div></div><span class="n">1/6</span></section>
+
+<!-- 2 -->
+<section class="s"><h2>"Tell me when X happens" is still a coding task</h2><p class="sub">Three things break today</p>
+<div class="row">
+<div class="card"><div class="ic">💻</div><h3>Your laptop must stay on</h3><p>Every watch is a script on your own machine. Close the lid, watching stops.</p></div>
+<div class="card"><div class="ic">🔤</div><h3>Alerts only match keywords</h3><p>Google Alerts / IFTTT can't answer "is this <i>bad</i> news?" — meaning needs an LLM.</p></div>
+<div class="card"><div class="ic">🤫</div><h3>Watchers die silently</h3><p>One cron job breaks, everything shares its fate. (My own crawler was dead 18 days before I noticed.)</p></div>
+</div><span class="n">2/6</span></section>
+
+<!-- 3 -->
+<section class="s"><h2>One sentence → one isolated watcher</h2><p class="sub">Sponsors are the skeleton, not decoration</p>
+<svg viewBox="0 0 1120 440" width="1120" height="440" style="margin:auto">
+<defs><marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#94a3b8"/></marker></defs>
+<g font-size="20" fill="#0f172a">
+<rect x="20" y="170" width="200" height="100" rx="18" fill="#0f172a"/><text x="120" y="212" text-anchor="middle" fill="#fff" font-weight="600">Telegram</text><text x="120" y="242" text-anchor="middle" fill="#94a3b8" font-size="16">/watch · /test · /stop</text>
+<line x1="220" y1="220" x2="300" y2="220" stroke="#94a3b8" stroke-width="3" marker-end="url(#a)"/>
+<rect x="300" y="150" width="240" height="140" rx="18" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/><text x="420" y="195" text-anchor="middle" font-weight="600">WatchBox bot</text><text x="420" y="225" text-anchor="middle" font-size="16" fill="#475569">bot/main.py</text><text x="420" y="255" text-anchor="middle" font-size="15" fill="#2563eb">lives in a Daytona sandbox</text>
+<line x1="540" y1="190" x2="640" y2="90" stroke="#94a3b8" stroke-width="3" marker-end="url(#a)"/>
+<rect x="640" y="30" width="260" height="110" rx="18" fill="#fff7ed" stroke="#f97316" stroke-width="2"/><text x="770" y="72" text-anchor="middle" font-weight="600">Nosana GPU · Ollama</text><text x="770" y="100" text-anchor="middle" font-size="16" fill="#475569">intent → spec JSON</text><text x="770" y="124" text-anchor="middle" font-size="16" fill="#475569">"does this item match?"</text>
+<line x1="540" y1="250" x2="640" y2="330" stroke="#94a3b8" stroke-width="3" marker-end="url(#a)"/>
+<rect x="640" y="290" width="260" height="120" rx="18" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/><text x="770" y="335" text-anchor="middle" font-weight="600">Daytona SDK</text><text x="770" y="365" text-anchor="middle" font-size="16" fill="#475569">create · fs.upload · exec · delete</text><text x="770" y="390" text-anchor="middle" font-size="15" fill="#2563eb">bot/factory.py</text>
+<line x1="900" y1="350" x2="960" y2="350" stroke="#94a3b8" stroke-width="3" marker-end="url(#a)"/>
+<g><rect x="960" y="250" width="140" height="70" rx="14" fill="#fff" stroke="#2563eb" stroke-width="2" stroke-dasharray="6 4"/><text x="1030" y="292" text-anchor="middle" font-size="16">sandbox #1</text>
+<rect x="960" y="330" width="140" height="70" rx="14" fill="#fff" stroke="#2563eb" stroke-width="2" stroke-dasharray="6 4"/><text x="1030" y="372" text-anchor="middle" font-size="16">sandbox #2</text>
+<rect x="960" y="410" width="140" height="30" rx="10" fill="#fff" stroke="#cbd5e1"/><text x="1030" y="431" text-anchor="middle" font-size="14" fill="#94a3b8">… one per watch</text></g>
+<line x1="1030" y1="250" x2="1030" y2="160" stroke="#f97316" stroke-width="2" stroke-dasharray="5 4" marker-end="url(#a)"/><text x="1030" y="150" text-anchor="middle" font-size="14" fill="#f97316">judge via Nosana</text>
+<text x="560" y="435" text-anchor="middle" font-size="18" fill="#475569">loop: fetch (news RSS · page diff · price API) → new items → LLM judge → Telegram</text>
+</g></svg><span class="n">3/6</span></section>
+
+<!-- 4 -->
+<section class="s"><h2>Live today</h2><p class="sub">Real phone, real sandboxes, real judgments</p>
+<div class="row"><div class="shot"><img src="shots/1.png" alt=""></div><div class="shot"><img src="shots/2.png" alt=""></div><div class="shot"><img src="shots/3.png" alt=""></div></div>
+<div class="stat"><div><b>1.86 s</b><span>Daytona sandbox, cold create (measured)</span></div><div><b>1 : 1</b><span>watch : sandbox — isolated, deletable</span></div><div><b>$0.70/h</b><span>Nosana RTX 6000 Ada running Qwen</span></div></div>
+<span class="n">4/6</span></section>
+
+<!-- 5 -->
+<section class="s"><h2>Why these sponsors, not a VPS</h2><p class="sub">Remove either one and the product disappears</p>
+<div class="row">
+<div class="card" style="border-color:#2563eb"><div class="ic">📦</div><h3>Daytona — a computer per watch</h3><p>Born in ~2 s from one sentence, stateful while it lives, gone on <code>/stop</code>. 100 watches = 100 boxes that never touch each other. The bot itself runs there too — laptop closed.</p></div>
+<div class="card" style="border-color:#f97316"><div class="ic">🧠</div><h3>Nosana — meaning, cheaply</h3><p>"Negative news?" is a judgment, not a keyword. Running it on a Nosana GPU makes 24/7 judging affordable; without it this is Google Alerts.</p></div>
+<div class="card"><div class="ic">🌐</div><h3>DNSimple — a name for the status page</h3><p>Optional. <code>dns.py</code> points <code>watch.&lt;domain&gt;</code> at the sandbox preview URL.</p></div>
+</div><span class="n">5/6</span></section>
+
+<!-- 6 -->
+<section class="s"><h2>What's next — and what's honestly missing</h2>
+<div class="row">
+<div class="card"><h3>Login sites</h3><p>KTX seats, real-estate listings need cookies. Next: Daytona Secrets so even the bot never sees them.</p></div>
+<div class="card"><h3>Cost</h3><p>An always-on sandbox is ~$1.6/day. Next: auto-stop between checks, wake on schedule → ~1/50.</p></div>
+<div class="card"><h3>First user: me</h3><p>Conference deadlines, price triggers, pool schedules. If a 9–27B judge isn't good enough, the Nosana axis gets cut — that's the kill condition.</p></div>
+</div>
+<p class="g" style="margin:26px 0 0">github.com/&lt;repo&gt; · @Daytonakorea_bot · templates today: news · page · price</p><span class="n">6/6</span></section>
+</body></html>
